@@ -1,18 +1,47 @@
-# Vue 3 + TypeScript + Vite
+# Vue 3 + TypeScript + Vite （工程化、模块化、规范化、流程化）
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## 项目技术
 
-## Recommended IDE Setup
+### 1. vue 3
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### 2. typeScript
 
-## Type Support For `.vue` Imports in TS
+### 3. Vite
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+### 4. eslint
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+### 5. husky
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+### 6. sass
+
+## 代码规范
+
+feat:	新功能
+fix:	修复 /修复问题/BUG
+docs:	文档变更 文档/注释
+style:	代码格式（不影响代码运行）/代码风格相关无影响运行结果的
+refactor:	重构（不增加新功能，也不是修改 bug） /重构
+perf:	性能优化 /优化/性能提升
+test:	添加测试 /测试相关
+chore:	修改构建过程或辅助工具 /依赖更新/脚手架配置修改等
+revert:	回退 /撤销修改
+build:	打包
+workflow: 工作流改进
+ci: 持续集成
+types: 类型定义文件更改
+wip: 开发中
+
+#
+
+## 项目遇到问题
+
+1. verifyCommit require('fs') 报require isundefined
+
+   解决方案： import { createRequire } from 'module'
+            const require = createRequire(import.meta.url)
+
+2. eslint不能识别node 的 全局语法
+
+   解决方案："node": true // 可以在全局使用node语法
+
+3. 
